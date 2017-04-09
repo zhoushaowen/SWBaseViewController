@@ -102,7 +102,7 @@
 {
     _barBackgroundImage = barBackgroundImage;
     _barBackgroundImageView.image = _barBackgroundImage;
-    _visualView.hidden = _barBackgroundImage;
+    _visualView.hidden = _barBackgroundImage != nil;
 }
 
 
