@@ -8,7 +8,7 @@
 
 #import "SWNavigationController.h"
 
-@interface SWNavigationController ()
+@interface SWNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -16,9 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.extendedLayoutIncludesOpaqueBars = YES;
     [self.navigationBar setBackgroundImage:[UIImage new] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [self.navigationBar setShadowImage:[UIImage new]];
+    self.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -29,6 +29,13 @@
 - (BOOL)prefersStatusBarHidden
 {
     return self.visibleViewController.prefersStatusBarHidden;
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if(self.viewControllers.count>1) return YES;
+    return NO;
 }
 
 
