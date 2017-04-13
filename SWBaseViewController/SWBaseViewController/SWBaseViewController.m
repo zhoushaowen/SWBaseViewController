@@ -106,5 +106,10 @@
     _visualView.hidden = _barBackgroundImage != nil;
 }
 
+#pragma mark - rotation
+- (BOOL)shouldAutorotate
+{
+    return NO;
+}
 
 @end

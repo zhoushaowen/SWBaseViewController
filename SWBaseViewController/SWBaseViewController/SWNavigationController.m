@@ -31,6 +31,11 @@
     return self.visibleViewController.prefersStatusBarHidden;
 }
 
+- (BOOL)shouldAutorotate
+{
+    return self.visibleViewController.shouldAutorotate;
+}
+
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {

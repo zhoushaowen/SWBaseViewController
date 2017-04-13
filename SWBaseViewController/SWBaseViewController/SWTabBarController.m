@@ -1,0 +1,34 @@
+//
+//  SWTabBarController.m
+//  SWBaseViewController
+//
+//  Created by zhoushaowen on 2017/4/13.
+//  Copyright © 2017年 Yidu. All rights reserved.
+//
+
+#import "SWTabBarController.h"
+
+@interface SWTabBarController ()
+
+@end
+
+@implementation SWTabBarController
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return self.selectedViewController.preferredStatusBarStyle;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return self.selectedViewController.prefersStatusBarHidden;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return self.selectedViewController.shouldAutorotate;
+}
+
+
+
+@end
