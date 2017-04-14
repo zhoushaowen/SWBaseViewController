@@ -21,6 +21,7 @@ static NSString *Cell = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"标题";
     self.barColor = [UIColor purpleColor];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick)];
     self.navigationItem.rightBarButtonItem = item;

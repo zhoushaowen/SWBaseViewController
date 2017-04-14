@@ -8,11 +8,10 @@
 
 #import "SWBaseViewController.h"
 
-@interface SWBaseViewController ()<UINavigationBarDelegate>
+@interface SWBaseViewController ()
 {
     UIVisualEffectView *_visualView;
 }
-@property (nonatomic,strong) UINavigationBar *navigationBar;
 @property (nonatomic,strong) UIVisualEffectView *visualView;
 @property (nonatomic,strong) UIImageView *barBackgroundImageView;
 
@@ -24,6 +23,7 @@
     [super viewDidLoad];
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.view.backgroundColor = [UIColor whiteColor];
+    if(!self.navigationController) return;
     _bar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
     _bar.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:_bar];
@@ -56,12 +56,14 @@
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
+    if(!self.navigationController) return;
     [self.view bringSubviewToFront:_bar];
 }
 
 - (void)setBarColor:(UIColor *)barColor
 {
     _barColor = barColor;
+    if(!self.navigationController) return;
     if(_barColor == nil){
         __block NSInteger count = 0;
         [_visualView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -102,6 +104,7 @@
 - (void)setBarBackgroundImage:(UIImage *)barBackgroundImage
 {
     _barBackgroundImage = barBackgroundImage;
+    if(!self.navigationController) return;
     _barBackgroundImageView.image = _barBackgroundImage;
     _visualView.hidden = _barBackgroundImage != nil;
 }
