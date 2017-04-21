@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3610B95B1EAA337000C49951 /* UIViewController+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */; };
 		365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */; };
 		36F3C6DD1E8C2B2D00812869 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C6DC1E8C2B2D00812869 /* main.m */; };
 		36F3C6E01E8C2B2D00812869 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C6DF1E8C2B2D00812869 /* AppDelegate.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3610B9591EAA337000C49951 /* UIViewController+SWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWBaseViewController.h"; sourceTree = "<group>"; };
+		3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWBaseViewController.m"; sourceTree = "<group>"; };
 		365EFBCE1E9F4ADE00E4315C /* SWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTabBarController.h; sourceTree = "<group>"; };
 		365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTabBarController.m; sourceTree = "<group>"; };
 		36F3C6D81E8C2B2D00812869 /* SWBaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWBaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +113,8 @@
 			children = (
 				36FA9C8C1E97D5200071FB96 /* SWBaseViewController.h */,
 				36FA9C8D1E97D5200071FB96 /* SWBaseViewController.m */,
+				3610B9591EAA337000C49951 /* UIViewController+SWBaseViewController.h */,
+				3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */,
 				36FA9C8E1E97D5200071FB96 /* SWNavigationController.h */,
 				36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */,
 				365EFBCE1E9F4ADE00E4315C /* SWTabBarController.h */,
@@ -193,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36F3C6FD1E8C2E5A00812869 /* ViewController.m in Sources */,
+				3610B95B1EAA337000C49951 /* UIViewController+SWBaseViewController.m in Sources */,
 				365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */,
 				36FA9C901E97D5200071FB96 /* SWBaseViewController.m in Sources */,
 				36F3C6FA1E8C2C2800812869 /* UIImage+Color.m in Sources */,

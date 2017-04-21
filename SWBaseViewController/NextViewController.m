@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //设置导航为透明
-    self.barBackgroundImage = [UIImage new];
+    self.sw_barBackgroundImage = [UIImage new];
 }
 
 - (void)didReceiveMemoryWarning {
