@@ -31,10 +31,11 @@
 @property (nonatomic,strong) UIImage *sw_barBackgroundImage;
 
 /**
- 是否允许自动旋转,默认NO
- */
-@property (nonatomic) BOOL sw_shouldAutorotate;
+ 设置自动旋转
 
+ @param sw_shouldAutorotate YES自定旋转,NO禁止旋转.
+ */
+- (void)setSw_shouldAutorotate:(BOOL)sw_shouldAutorotate;
 /**
  初始化界面的方法,请在系统的viewDidLoad里面调用
  */

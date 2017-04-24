@@ -21,6 +21,7 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
 //category私有属性
 @property (nonatomic,strong) UIVisualEffectView *sw_visualView;
 @property (nonatomic,strong) UIImageView *sw_barBackgroundImageView;
+@property (nonatomic) BOOL sw_shouldAutorotate;// 是否允许自动旋转,默认NO
 
 @end
 
@@ -30,7 +31,6 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
 @dynamic sw_barBottomLine;
 @dynamic sw_barColor;
 @dynamic sw_barBackgroundImage;
-@dynamic sw_shouldAutorotate;
 
 + (void)load {
     Method systemMethod = class_getInstanceMethod([self class], @selector(shouldAutorotate));

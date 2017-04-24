@@ -21,7 +21,7 @@ static NSString *Cell = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.sw_shouldAutorotate = YES;
+    [self setSw_shouldAutorotate:YES];
     self.title = @"标题";
     self.sw_barColor = [UIColor purpleColor];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick)];
