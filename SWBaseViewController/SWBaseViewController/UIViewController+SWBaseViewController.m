@@ -32,6 +32,12 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
 @dynamic sw_barBackgroundImage;
 @dynamic sw_shouldAutorotate;
 
++ (void)load {
+    Method systemMethod = class_getInstanceMethod([self class], @selector(shouldAutorotate));
+    Method customMethod = class_getInstanceMethod([self class], @selector(sw_shouldAutorotate));
+    method_exchangeImplementations(systemMethod, customMethod);
+}
+
 #pragma mark - Public
 - (void)sw_viewDidLoad {
     self.extendedLayoutIncludesOpaqueBars = YES;

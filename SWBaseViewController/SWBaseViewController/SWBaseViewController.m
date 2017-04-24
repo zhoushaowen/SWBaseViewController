@@ -25,10 +25,4 @@
     [self sw_viewWillLayoutSubviews];
 }
 
-#pragma mark - rotation
-- (BOOL)shouldAutorotate
-{
-    return self.sw_shouldAutorotate;
-}
-
 @end
