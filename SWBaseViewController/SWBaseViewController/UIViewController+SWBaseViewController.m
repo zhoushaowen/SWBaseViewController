@@ -48,7 +48,6 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
     [self.view addSubview:self.sw_bar];
     self.sw_barBackgroundImageView = [[UIImageView alloc] initWithFrame:self.sw_bar.bounds];
     self.sw_barBackgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    self.sw_barBackgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.sw_barBackgroundImageView.clipsToBounds = YES;
     [self.sw_bar addSubview:self.sw_barBackgroundImageView];
     
