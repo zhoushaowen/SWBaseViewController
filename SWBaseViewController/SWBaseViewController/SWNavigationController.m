@@ -14,16 +14,35 @@
 
 @implementation SWNavigationController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self){
+        [self appearance];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if(self){
+        [self appearance];
+    }
+    return self;
+}
+
+- (void)appearance {
+    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage new] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setShadowImage:[UIImage new]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationBar setBackgroundImage:[UIImage new] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-    [self.navigationBar setShadowImage:[UIImage new]];
     self.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return self.visibleViewController.preferredStatusBarStyle;
+    return self.topViewController.preferredStatusBarStyle;
 }
 
 - (BOOL)prefersStatusBarHidden

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3610B95B1EAA337000C49951 /* UIViewController+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */; };
+		3655FD691EAF868A005B730C /* UINavigationController+SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3655FD681EAF868A005B730C /* UINavigationController+SWNavigationController.m */; };
 		365E89001EADBE930035B637 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365E88FE1EADBE930035B637 /* 1@2x.png */; };
 		365E89011EADBE930035B637 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365E88FF1EADBE930035B637 /* 2@2x.png */; };
 		365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */; };
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		3610B9591EAA337000C49951 /* UIViewController+SWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWBaseViewController.h"; sourceTree = "<group>"; };
 		3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWBaseViewController.m"; sourceTree = "<group>"; };
+		3655FD671EAF868A005B730C /* UINavigationController+SWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SWNavigationController.h"; sourceTree = "<group>"; };
+		3655FD681EAF868A005B730C /* UINavigationController+SWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SWNavigationController.m"; sourceTree = "<group>"; };
 		365E88FE1EADBE930035B637 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 		365E88FF1EADBE930035B637 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
 		365EFBCE1E9F4ADE00E4315C /* SWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTabBarController.h; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */,
 				36FA9C8E1E97D5200071FB96 /* SWNavigationController.h */,
 				36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */,
+				3655FD671EAF868A005B730C /* UINavigationController+SWNavigationController.h */,
+				3655FD681EAF868A005B730C /* UINavigationController+SWNavigationController.m */,
 				365EFBCE1E9F4ADE00E4315C /* SWTabBarController.h */,
 				365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */,
 			);
@@ -198,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36F3C6FD1E8C2E5A00812869 /* ViewController.m in Sources */,
+				3655FD691EAF868A005B730C /* UINavigationController+SWNavigationController.m in Sources */,
 				3610B95B1EAA337000C49951 /* UIViewController+SWBaseViewController.m in Sources */,
 				365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */,
 				36FA9C901E97D5200071FB96 /* SWBaseViewController.m in Sources */,
