@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NextViewController.h"
+#import "SWVisualEffectView.h"
 
 static NSString *Cell = @"cell";
 
@@ -33,6 +34,7 @@ static NSString *Cell = @"cell";
     _tableView.rowHeight = 150;
     [self.view addSubview:_tableView];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:Cell];
+    
 }
 
 - (void)rightItemClick {

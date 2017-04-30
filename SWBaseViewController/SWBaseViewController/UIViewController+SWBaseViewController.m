@@ -127,6 +127,7 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
         behindFilterView.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.5];
         if(frontFilterView == nil){
             frontFilterView = [[NSClassFromString(@"_UIVisualEffectFilterView") alloc] initWithFrame:behindFilterView.bounds];
+            frontFilterView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
             frontFilterView.backgroundColor = self.sw_barColor;
             frontFilterView.alpha = 0.85f;
             [self.sw_visualView insertSubview:frontFilterView aboveSubview:behindFilterView];
