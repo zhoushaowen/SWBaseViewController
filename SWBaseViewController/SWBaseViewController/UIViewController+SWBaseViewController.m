@@ -71,12 +71,6 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
     [self.sw_bar addSubview:self.sw_barBottomLine];
 }
 
-- (void)sw_viewWillLayoutSubviews
-{
-    if(!self.navigationController) return;
-    [self.view bringSubviewToFront:self.sw_bar];
-}
-
 #pragma mark - Setter&Getter
 - (void)setSw_bar:(UIView *)sw_bar {
     objc_setAssociatedObject(self, SW_bar_key, sw_bar, OBJC_ASSOCIATION_RETAIN);

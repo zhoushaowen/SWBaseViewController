@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360C25761EC19BA2003423B2 /* UIView+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C25751EC19BA2003423B2 /* UIView+SWBaseViewController.m */; };
 		3610B95B1EAA337000C49951 /* UIViewController+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */; };
 		363BFCE51EB5EEF80074B7FE /* SWVisualEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */; };
 		3655FD691EAF868A005B730C /* UINavigationController+SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3655FD681EAF868A005B730C /* UINavigationController+SWNavigationController.m */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		360C25741EC19BA2003423B2 /* UIView+SWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SWBaseViewController.h"; sourceTree = "<group>"; };
+		360C25751EC19BA2003423B2 /* UIView+SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SWBaseViewController.m"; sourceTree = "<group>"; };
 		3610B9591EAA337000C49951 /* UIViewController+SWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWBaseViewController.h"; sourceTree = "<group>"; };
 		3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWBaseViewController.m"; sourceTree = "<group>"; };
 		363BFCE31EB5EEF80074B7FE /* SWVisualEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWVisualEffectView.h; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */,
 				363BFCE31EB5EEF80074B7FE /* SWVisualEffectView.h */,
 				363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */,
+				360C25741EC19BA2003423B2 /* UIView+SWBaseViewController.h */,
+				360C25751EC19BA2003423B2 /* UIView+SWBaseViewController.m */,
 				36FA9C8E1E97D5200071FB96 /* SWNavigationController.h */,
 				36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */,
 				3655FD671EAF868A005B730C /* UINavigationController+SWNavigationController.h */,
@@ -207,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360C25761EC19BA2003423B2 /* UIView+SWBaseViewController.m in Sources */,
 				36F3C6FD1E8C2E5A00812869 /* ViewController.m in Sources */,
 				3655FD691EAF868A005B730C /* UINavigationController+SWNavigationController.m in Sources */,
 				363BFCE51EB5EEF80074B7FE /* SWVisualEffectView.m in Sources */,

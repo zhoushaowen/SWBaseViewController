@@ -19,10 +19,4 @@
     [self sw_viewDidLoad];
 }
 
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
-    [self sw_viewWillLayoutSubviews];
-}
-
 @end

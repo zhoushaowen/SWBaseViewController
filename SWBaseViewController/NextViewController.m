@@ -7,6 +7,7 @@
 //
 
 #import "NextViewController.h"
+#import "SWVisualEffectView.h"
 
 @interface NextViewController ()
 
@@ -17,7 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //设置导航为透明
-    self.sw_barBackgroundImage = [UIImage new];
+//    self.sw_barBackgroundImage = [UIImage new];
+    
+    SWVisualEffectView *view = [[SWVisualEffectView alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, 70)];
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

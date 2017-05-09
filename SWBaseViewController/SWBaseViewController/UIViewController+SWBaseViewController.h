@@ -41,10 +41,5 @@
  */
 - (void)sw_viewDidLoad;
 
-/**
- 内部会将自定义的bar移动的最上面,请在系统的viewWillLayoutSubviews里面调用
- */
-- (void)sw_viewWillLayoutSubviews;
-
 
 @end
