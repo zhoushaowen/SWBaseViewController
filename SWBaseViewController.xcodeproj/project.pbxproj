@@ -24,6 +24,7 @@
 		36F8F9361E9787D100B79024 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8F9351E9787D100B79024 /* NextViewController.m */; };
 		36FA9C901E97D5200071FB96 /* SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA9C8D1E97D5200071FB96 /* SWBaseViewController.m */; };
 		36FA9C911E97D5200071FB96 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */; };
+		36FB92E21ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FB92E11ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		36FA9C8D1E97D5200071FB96 /* SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseViewController.m; sourceTree = "<group>"; };
 		36FA9C8E1E97D5200071FB96 /* SWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWNavigationController.h; sourceTree = "<group>"; };
 		36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWNavigationController.m; sourceTree = "<group>"; };
+		36FB92E01ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+SWRotation.h"; sourceTree = "<group>"; };
+		36FB92E11ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+SWRotation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				36FA9C8D1E97D5200071FB96 /* SWBaseViewController.m */,
 				3610B9591EAA337000C49951 /* UIViewController+SWBaseViewController.h */,
 				3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */,
+				36FB92E01ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.h */,
+				36FB92E11ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m */,
 				363BFCE31EB5EEF80074B7FE /* SWVisualEffectView.h */,
 				363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */,
 				360C25741EC19BA2003423B2 /* UIView+SWBaseViewController.h */,
@@ -214,6 +219,7 @@
 			files = (
 				360C25761EC19BA2003423B2 /* UIView+SWBaseViewController.m in Sources */,
 				36F3C6FD1E8C2E5A00812869 /* ViewController.m in Sources */,
+				36FB92E21ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m in Sources */,
 				3655FD691EAF868A005B730C /* UINavigationController+SWNavigationController.m in Sources */,
 				363BFCE51EB5EEF80074B7FE /* SWVisualEffectView.m in Sources */,
 				3610B95B1EAA337000C49951 /* UIViewController+SWBaseViewController.m in Sources */,
