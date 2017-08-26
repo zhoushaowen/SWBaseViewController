@@ -67,8 +67,20 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
     CGFloat height = 1/[UIScreen mainScreen].scale;
     self.sw_barBottomLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.sw_bar.frame.size.height, self.sw_visualView.frame.size.width, height)];
     self.sw_barBottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
-    self.sw_barBottomLine.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3f];
+    self.sw_barBottomLine.image = [self sw_createImageWithColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3f]];
     [self.sw_bar addSubview:self.sw_barBottomLine];
+}
+
+- (UIImage *)sw_createImageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 #pragma mark - Setter&Getter
