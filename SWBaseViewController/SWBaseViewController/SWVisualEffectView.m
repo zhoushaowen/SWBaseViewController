@@ -11,6 +11,7 @@
 @implementation SWVisualEffectView
 {
     UIVisualEffectView *_visualView;
+    UIView *_backgroundView;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -21,14 +22,11 @@
         _visualView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
         _visualView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         _visualView.frame = self.bounds;
-        _visualView.contentView.hidden = YES;
-        [_visualView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if([obj isKindOfClass:NSClassFromString(@"_UIVisualEffectFilterView")]){
-                obj.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.8];
-                *stop = YES;
-            }
-        }];
         [self addSubview:_visualView];
+        _backgroundView = [[UIView alloc] initWithFrame:_visualView.contentView.bounds];
+        _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        _backgroundView.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.8];
+        [_visualView.contentView addSubview:_backgroundView];
     }
     return self;
 }
@@ -36,42 +34,10 @@
 - (void)setSw_tintColor:(UIColor *)sw_tintColor {
     _sw_tintColor = sw_tintColor;
     if(_sw_tintColor == nil){
-        __block NSInteger count = 0;
-        [_visualView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if([obj isKindOfClass:NSClassFromString(@"_UIVisualEffectFilterView")]){
-                obj.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.8];
-                count ++;
-                if(count>1){
-                    [obj removeFromSuperview];
-                    *stop = YES;
-                }
-            }
-        }];
+        _backgroundView.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.8];
     }else{
-        __block NSInteger count = 0;
-        __block UIView *behindFilterView = nil;
-        __block UIView *frontFilterView = nil;
-        [_visualView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if([obj isKindOfClass:NSClassFromString(@"_UIVisualEffectFilterView")]){
-                obj.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.8];
-                count ++;
-                if(count>1){
-                    frontFilterView = obj;
-                }else{
-                    behindFilterView = obj;
-                }
-            }
-        }];
-        behindFilterView.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.5];
-        if(frontFilterView == nil){
-            frontFilterView = [[NSClassFromString(@"_UIVisualEffectFilterView") alloc] initWithFrame:behindFilterView.bounds];
-            frontFilterView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-            frontFilterView.backgroundColor = _sw_tintColor;
-            frontFilterView.alpha = 0.85f;
-            [_visualView insertSubview:frontFilterView aboveSubview:behindFilterView];
-        }
+        _backgroundView.backgroundColor = [_sw_tintColor colorWithAlphaComponent:0.8f];
     }
-
 }
 
 

@@ -47,12 +47,12 @@
 
 - (BOOL)prefersStatusBarHidden
 {
-    return self.visibleViewController.prefersStatusBarHidden;
+    return self.topViewController.prefersStatusBarHidden;
 }
 
 - (BOOL)shouldAutorotate
 {
-    return self.visibleViewController.shouldAutorotate;
+    return self.topViewController.shouldAutorotate;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {

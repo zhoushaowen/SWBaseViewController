@@ -10,7 +10,6 @@
 		360C25761EC19BA2003423B2 /* UIView+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C25751EC19BA2003423B2 /* UIView+SWBaseViewController.m */; };
 		3610B95B1EAA337000C49951 /* UIViewController+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */; };
 		363BFCE51EB5EEF80074B7FE /* SWVisualEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */; };
-		3655FD691EAF868A005B730C /* UINavigationController+SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3655FD681EAF868A005B730C /* UINavigationController+SWNavigationController.m */; };
 		365E89001EADBE930035B637 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365E88FE1EADBE930035B637 /* 1@2x.png */; };
 		365E89011EADBE930035B637 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365E88FF1EADBE930035B637 /* 2@2x.png */; };
 		365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */; };
@@ -24,7 +23,6 @@
 		36F8F9361E9787D100B79024 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8F9351E9787D100B79024 /* NextViewController.m */; };
 		36FA9C901E97D5200071FB96 /* SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA9C8D1E97D5200071FB96 /* SWBaseViewController.m */; };
 		36FA9C911E97D5200071FB96 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */; };
-		36FB92E21ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FB92E11ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +32,6 @@
 		3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWBaseViewController.m"; sourceTree = "<group>"; };
 		363BFCE31EB5EEF80074B7FE /* SWVisualEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWVisualEffectView.h; sourceTree = "<group>"; };
 		363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWVisualEffectView.m; sourceTree = "<group>"; };
-		3655FD671EAF868A005B730C /* UINavigationController+SWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SWNavigationController.h"; sourceTree = "<group>"; };
-		3655FD681EAF868A005B730C /* UINavigationController+SWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SWNavigationController.m"; sourceTree = "<group>"; };
 		365E88FE1EADBE930035B637 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 		365E88FF1EADBE930035B637 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
 		365EFBCE1E9F4ADE00E4315C /* SWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTabBarController.h; sourceTree = "<group>"; };
@@ -58,8 +54,6 @@
 		36FA9C8D1E97D5200071FB96 /* SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseViewController.m; sourceTree = "<group>"; };
 		36FA9C8E1E97D5200071FB96 /* SWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWNavigationController.h; sourceTree = "<group>"; };
 		36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWNavigationController.m; sourceTree = "<group>"; };
-		36FB92E01ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+SWRotation.h"; sourceTree = "<group>"; };
-		36FB92E11ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+SWRotation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,16 +121,12 @@
 				36FA9C8D1E97D5200071FB96 /* SWBaseViewController.m */,
 				3610B9591EAA337000C49951 /* UIViewController+SWBaseViewController.h */,
 				3610B95A1EAA337000C49951 /* UIViewController+SWBaseViewController.m */,
-				36FB92E01ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.h */,
-				36FB92E11ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m */,
 				363BFCE31EB5EEF80074B7FE /* SWVisualEffectView.h */,
 				363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */,
 				360C25741EC19BA2003423B2 /* UIView+SWBaseViewController.h */,
 				360C25751EC19BA2003423B2 /* UIView+SWBaseViewController.m */,
 				36FA9C8E1E97D5200071FB96 /* SWNavigationController.h */,
 				36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */,
-				3655FD671EAF868A005B730C /* UINavigationController+SWNavigationController.h */,
-				3655FD681EAF868A005B730C /* UINavigationController+SWNavigationController.m */,
 				365EFBCE1E9F4ADE00E4315C /* SWTabBarController.h */,
 				365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */,
 			);
@@ -174,7 +164,7 @@
 				TargetAttributes = {
 					36F3C6D71E8C2B2D00812869 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 2YW229246G;
+						DevelopmentTeam = T2KGXA54VS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -219,8 +209,6 @@
 			files = (
 				360C25761EC19BA2003423B2 /* UIView+SWBaseViewController.m in Sources */,
 				36F3C6FD1E8C2E5A00812869 /* ViewController.m in Sources */,
-				36FB92E21ECC6DAC00B4ADE9 /* UIAlertController+SWRotation.m in Sources */,
-				3655FD691EAF868A005B730C /* UINavigationController+SWNavigationController.m in Sources */,
 				363BFCE51EB5EEF80074B7FE /* SWVisualEffectView.m in Sources */,
 				3610B95B1EAA337000C49951 /* UIViewController+SWBaseViewController.m in Sources */,
 				365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */,
@@ -349,12 +337,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2YW229246G;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T2KGXA54VS;
 				INFOPLIST_FILE = SWBaseViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yidu.SWBaseViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.loko.SWBaseViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -362,12 +352,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2YW229246G;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T2KGXA54VS;
 				INFOPLIST_FILE = SWBaseViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yidu.SWBaseViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.loko.SWBaseViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

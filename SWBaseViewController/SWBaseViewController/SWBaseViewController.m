@@ -19,6 +19,10 @@
     [self sw_viewDidLoad];
 }
 
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }

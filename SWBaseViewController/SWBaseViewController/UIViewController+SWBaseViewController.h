@@ -29,13 +29,6 @@
  自定义bar的背景图片,设置之后为非nil之后毛玻璃效果会自动消失
  */
 @property (nonatomic,strong) UIImage *sw_barBackgroundImage;
-
-/**
- 设置自动旋转
-
- @param sw_shouldAutorotate YES自定旋转,NO禁止旋转.
- */
-- (void)setSw_shouldAutorotate:(BOOL)sw_shouldAutorotate;
 /**
  初始化界面的方法,请在系统的viewDidLoad里面调用
  */

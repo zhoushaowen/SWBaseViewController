@@ -8,20 +8,19 @@
 
 #import "UIViewController+SWBaseViewController.h"
 #import <objc/runtime.h>
+#import "SWVisualEffectView.h"
 
 static void *SW_bar_key = &SW_bar_key;
 static void *SW_barBottomLine_key = &SW_barBottomLine_key;
 static void *SW_barColor_key = &SW_barColor_key;
 static void *SW_barBackgroundImage_key = &SW_barBackgroundImage_key;
-static void *SW_shouldAutorotate_key = &SW_shouldAutorotate_key;
 static void *SW_visualView_key = &SW_visualView_key;
 static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
 
 @interface UIViewController ()
 //category私有属性
-@property (nonatomic,strong) UIVisualEffectView *sw_visualView;
+@property (nonatomic,strong) SWVisualEffectView *sw_visualView;
 @property (nonatomic,strong) UIImageView *sw_barBackgroundImageView;
-@property (nonatomic) BOOL sw_shouldAutorotate;// 是否允许自动旋转,默认NO
 
 @end
 
@@ -31,12 +30,6 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
 @dynamic sw_barBottomLine;
 @dynamic sw_barColor;
 @dynamic sw_barBackgroundImage;
-
-+ (void)load {
-    Method systemMethod = class_getInstanceMethod([self class], @selector(shouldAutorotate));
-    Method customMethod = class_getInstanceMethod([self class], @selector(sw_shouldAutorotate));
-    method_exchangeImplementations(systemMethod, customMethod);
-}
 
 #pragma mark - Public
 - (void)sw_viewDidLoad {
@@ -51,17 +44,8 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
     self.sw_barBackgroundImageView.clipsToBounds = YES;
     [self.sw_bar addSubview:self.sw_barBackgroundImageView];
     
-    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    self.sw_visualView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    self.sw_visualView = [[SWVisualEffectView alloc] initWithFrame:self.sw_bar.bounds];
     self.sw_visualView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    self.sw_visualView.frame = self.sw_bar.bounds;
-    self.sw_visualView.contentView.hidden = YES;
-    [self.sw_visualView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if([obj isKindOfClass:NSClassFromString(@"_UIVisualEffectFilterView")]){
-            obj.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.8];
-            *stop = YES;
-        }
-    }];
     [self.sw_bar addSubview:self.sw_visualView];
     
     CGFloat height = 1/[UIScreen mainScreen].scale;
@@ -103,42 +87,7 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
 - (void)setSw_barColor:(UIColor *)sw_barColor {
     objc_setAssociatedObject(self, SW_barColor_key, sw_barColor, OBJC_ASSOCIATION_RETAIN);
     if(!self.navigationController) return;
-    if(sw_barColor == nil){
-        __block NSInteger count = 0;
-        [self.sw_visualView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if([obj isKindOfClass:NSClassFromString(@"_UIVisualEffectFilterView")]){
-                obj.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.8];
-                count ++;
-                if(count>1){
-                    [obj removeFromSuperview];
-                    *stop = YES;
-                }
-            }
-        }];
-    }else{
-        __block NSInteger count = 0;
-        __block UIView *behindFilterView = nil;
-        __block UIView *frontFilterView = nil;
-        [self.sw_visualView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if([obj isKindOfClass:NSClassFromString(@"_UIVisualEffectFilterView")]){
-                obj.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.8];
-                count ++;
-                if(count>1){
-                    frontFilterView = obj;
-                }else{
-                    behindFilterView = obj;
-                }
-            }
-        }];
-        behindFilterView.backgroundColor = [UIColor colorWithWhite:0.97 alpha:0.5];
-        if(frontFilterView == nil){
-            frontFilterView = [[NSClassFromString(@"_UIVisualEffectFilterView") alloc] initWithFrame:behindFilterView.bounds];
-            frontFilterView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-            frontFilterView.backgroundColor = self.sw_barColor;
-            frontFilterView.alpha = 0.85f;
-            [self.sw_visualView insertSubview:frontFilterView aboveSubview:behindFilterView];
-        }
-    }
+    self.sw_visualView.sw_tintColor = sw_barColor;
 }
 
 - (UIColor *)sw_barColor {
@@ -156,19 +105,11 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
     return objc_getAssociatedObject(self, SW_barBackgroundImage_key);
 }
 
-- (void)setSw_shouldAutorotate:(BOOL)sw_shouldAutorotate {
-    objc_setAssociatedObject(self, SW_shouldAutorotate_key, @(sw_shouldAutorotate), OBJC_ASSOCIATION_RETAIN);
-}
-
-- (BOOL)sw_shouldAutorotate {
-    return [objc_getAssociatedObject(self, SW_shouldAutorotate_key) boolValue];
-}
-
-- (void)setSw_visualView:(UIVisualEffectView *)sw_visualView {
+- (void)setSw_visualView:(SWVisualEffectView *)sw_visualView {
     objc_setAssociatedObject(self, SW_visualView_key, sw_visualView, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (UIVisualEffectView *)sw_visualView {
+- (SWVisualEffectView *)sw_visualView {
     return objc_getAssociatedObject(self, SW_visualView_key);
 }
 

@@ -17,11 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor cyanColor];
     //设置导航为透明
-//    self.sw_barBackgroundImage = [UIImage new];
-    
-    SWVisualEffectView *view = [[SWVisualEffectView alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, 70)];
-    [self.view addSubview:view];
+    self.sw_barBackgroundImage = [UIImage new];
+    //设置背景图
+//    self.sw_barBackgroundImage = [UIImage imageNamed:@"2"];
+    //隐藏下划线
+    self.sw_barBottomLine.image = [UIImage new];
 }
 
 - (void)didReceiveMemoryWarning {
