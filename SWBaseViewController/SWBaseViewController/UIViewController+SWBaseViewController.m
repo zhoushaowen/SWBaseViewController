@@ -36,7 +36,12 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     if(!self.navigationController) return;
-    self.sw_bar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
+    //iphoneX的导航高度是88,tabbar的高度是83,statusBar高度: 44
+    if([self sw_isIPhoneX]){
+        self.sw_bar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 88)];
+    }else{
+        self.sw_bar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
+    }
     self.sw_bar.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:self.sw_bar];
     self.sw_barBackgroundImageView = [[UIImageView alloc] initWithFrame:self.sw_bar.bounds];
@@ -120,6 +125,15 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
 - (UIImageView *)sw_barBackgroundImageView {
     return objc_getAssociatedObject(self, SW_barBackgroundImageView_key);
 }
+
+- (BOOL)sw_isIPhoneX {
+    BOOL flag = NO;
+    if([UIScreen mainScreen].bounds.size.width == 375 && [UIScreen mainScreen].bounds.size.height == 812) {
+        flag = YES;
+    }
+    return flag;
+}
+
 
 
 
