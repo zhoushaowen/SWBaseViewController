@@ -23,7 +23,7 @@
     //设置背景图
 //    self.sw_barBackgroundImage = [UIImage imageNamed:@"2"];
     //隐藏下划线
-    self.sw_barBottomLine.image = [UIImage new];
+    self.sw_barBottomLineImage = [UIImage new];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,20 +16,22 @@ static void *SW_barColor_key = &SW_barColor_key;
 static void *SW_barBackgroundImage_key = &SW_barBackgroundImage_key;
 static void *SW_visualView_key = &SW_visualView_key;
 static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
+static void *SW_barBottomLineImage_key = &SW_barBottomLineImage_key;
 
 @interface UIViewController ()
 //category私有属性
 @property (nonatomic,strong) SWVisualEffectView *sw_visualView;
 @property (nonatomic,strong) UIImageView *sw_barBackgroundImageView;
+@property (nonatomic,strong) UIImageView *sw_barBottomLine;
 
 @end
 
 @implementation UIViewController (SWBaseViewController)
 
 @dynamic sw_bar;
-@dynamic sw_barBottomLine;
 @dynamic sw_barColor;
 @dynamic sw_barBackgroundImage;
+@dynamic sw_barBottomLineImage;
 
 #pragma mark - Public
 - (void)sw_viewDidLoad {
@@ -54,9 +56,10 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
     [self.sw_bar addSubview:self.sw_visualView];
     
     CGFloat height = 1/[UIScreen mainScreen].scale;
-    self.sw_barBottomLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.sw_bar.frame.size.height, self.sw_visualView.frame.size.width, height)];
+    self.sw_barBottomLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.sw_bar.frame.size.height - height, self.sw_visualView.frame.size.width, height)];
     self.sw_barBottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
     self.sw_barBottomLine.image = [self sw_createImageWithColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3f]];
+    self.sw_barBottomLineImage = self.sw_barBottomLine.image;
     [self.sw_bar addSubview:self.sw_barBottomLine];
 }
 
@@ -108,6 +111,20 @@ static void *SW_barBackgroundImageView_key = &SW_barBackgroundImageView_key;
 
 - (UIImage *)sw_barBackgroundImage {
     return objc_getAssociatedObject(self, SW_barBackgroundImage_key);
+}
+
+- (void)setSw_barBottomLineImage:(UIImage *)sw_barBottomLineImage {
+    objc_setAssociatedObject(self, SW_barBottomLineImage_key, sw_barBottomLineImage, OBJC_ASSOCIATION_RETAIN);
+    if(!self.navigationController) return;
+    if(sw_barBottomLineImage == nil){
+        self.sw_barBottomLine.image = [self sw_createImageWithColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3f]];
+    }else{
+        self.sw_barBottomLine.image = sw_barBottomLineImage;
+    }
+}
+
+- (UIImage *)sw_barBottomLineImage {
+    return objc_getAssociatedObject(self, SW_barBottomLineImage_key);
 }
 
 - (void)setSw_visualView:(SWVisualEffectView *)sw_visualView {
