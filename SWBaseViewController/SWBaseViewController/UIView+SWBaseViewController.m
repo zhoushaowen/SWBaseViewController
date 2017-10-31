@@ -22,9 +22,7 @@
     [self sw_addSubview:view];
     if([[self nextResponder] isKindOfClass:[SWBaseViewController class]]){
         SWBaseViewController *vc = (SWBaseViewController *)[self nextResponder];
-        if(vc.navigationController){
-            [self bringSubviewToFront:vc.sw_bar];
-        }
+        [self bringSubviewToFront:vc.sw_bar];
     }
 }
 
