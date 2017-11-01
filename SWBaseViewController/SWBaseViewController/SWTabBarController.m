@@ -14,6 +14,14 @@
 
 @implementation SWTabBarController
 
+- (UIViewController *)childViewControllerForStatusBarHidden {
+    return nil;
+}
+
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return nil;
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return self.selectedViewController.preferredStatusBarStyle;

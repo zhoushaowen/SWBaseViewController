@@ -19,6 +19,11 @@
     [self sw_viewDidLoad];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[[UIApplication sharedApplication].delegate window].rootViewController setNeedsStatusBarAppearanceUpdate];
+}
+
 - (BOOL)shouldAutorotate {
     return NO;
 }

@@ -40,14 +40,22 @@
     self.interactivePopGestureRecognizer.delegate = self;
 }
 
+- (UIViewController *)childViewControllerForStatusBarHidden {
+    return nil;
+}
+
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return nil;
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return self.topViewController.preferredStatusBarStyle;
+    return self.visibleViewController.preferredStatusBarStyle;
 }
 
 - (BOOL)prefersStatusBarHidden
 {
-    return self.topViewController.prefersStatusBarHidden;
+    return self.visibleViewController.prefersStatusBarHidden;
 }
 
 - (BOOL)shouldAutorotate
