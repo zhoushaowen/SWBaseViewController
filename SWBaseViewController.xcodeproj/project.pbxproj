@@ -13,6 +13,7 @@
 		365E89011EADBE930035B637 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365E88FF1EADBE930035B637 /* 2@2x.png */; };
 		365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */; };
 		36A579331F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A579321F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m */; };
+		36CDFA1420C77EA600760657 /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CDFA1320C77EA600760657 /* PresentViewController.m */; };
 		36F3C6DD1E8C2B2D00812869 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C6DC1E8C2B2D00812869 /* main.m */; };
 		36F3C6E01E8C2B2D00812869 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C6DF1E8C2B2D00812869 /* AppDelegate.m */; };
 		36F3C6E61E8C2B2D00812869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F3C6E41E8C2B2D00812869 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 		365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTabBarController.m; sourceTree = "<group>"; };
 		36A579311F78B10A00EA5C21 /* UIViewController+SWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWBaseViewController.h"; sourceTree = "<group>"; };
 		36A579321F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWBaseViewController.m"; sourceTree = "<group>"; };
+		36CDFA1220C77EA600760657 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
+		36CDFA1320C77EA600760657 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
 		36F3C6D81E8C2B2D00812869 /* SWBaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWBaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F3C6DC1E8C2B2D00812869 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36F3C6DE1E8C2B2D00812869 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				36F3C6FC1E8C2E5A00812869 /* ViewController.m */,
 				36F8F9341E9787D100B79024 /* NextViewController.h */,
 				36F8F9351E9787D100B79024 /* NextViewController.m */,
+				36CDFA1220C77EA600760657 /* PresentViewController.h */,
+				36CDFA1320C77EA600760657 /* PresentViewController.m */,
 				36F3C6F81E8C2C2800812869 /* UIImage+Color.h */,
 				36F3C6F91E8C2C2800812869 /* UIImage+Color.m */,
 				36F3C6E41E8C2B2D00812869 /* Main.storyboard */,
@@ -209,6 +214,7 @@
 			files = (
 				360C25761EC19BA2003423B2 /* UIView+SWBaseViewController.m in Sources */,
 				36F3C6FD1E8C2E5A00812869 /* ViewController.m in Sources */,
+				36CDFA1420C77EA600760657 /* PresentViewController.m in Sources */,
 				363BFCE51EB5EEF80074B7FE /* SWVisualEffectView.m in Sources */,
 				365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */,
 				36FA9C901E97D5200071FB96 /* SWBaseViewController.m in Sources */,

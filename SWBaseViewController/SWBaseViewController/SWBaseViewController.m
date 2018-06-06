@@ -28,6 +28,17 @@
     return NO;
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    if (@available(iOS 11.0, *)) {
+        self.sw_bar.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.safeAreaInsets.top);
+    } else {
+        CGFloat height = 44.0;
+        height += [UIApplication sharedApplication].isStatusBarHidden ? 0 : 20;
+        self.sw_bar.frame = CGRectMake(0, 0, self.view.bounds.size.width, height);
+    }
+}
+
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }

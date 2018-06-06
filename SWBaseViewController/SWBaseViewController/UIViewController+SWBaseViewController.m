@@ -37,13 +37,7 @@ static void *SW_barBottomLineImage_key = &SW_barBottomLineImage_key;
 - (void)sw_viewDidLoad {
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    //iphoneX的导航高度是88,tabbar的高度是83,statusBar高度: 44
-    if([self sw_isIPhoneX]){
-        self.sw_bar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 88)];
-    }else{
-        self.sw_bar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
-    }
-    self.sw_bar.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleBottomMargin;
+    self.sw_bar = [[UIView alloc] init];
     [self.view addSubview:self.sw_bar];
     self.sw_barBackgroundImageView = [[UIImageView alloc] initWithFrame:self.sw_bar.bounds];
     self.sw_barBackgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
@@ -60,6 +54,7 @@ static void *SW_barBottomLineImage_key = &SW_barBottomLineImage_key;
     self.sw_barBottomLine.image = [self sw_createImageWithColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3f]];
     self.sw_barBottomLineImage = self.sw_barBottomLine.image;
     [self.sw_bar addSubview:self.sw_barBottomLine];
+    self.sw_bar.hidden = self.navigationController == nil;
 }
 
 - (UIImage *)sw_createImageWithColor:(UIColor *)color
@@ -137,14 +132,6 @@ static void *SW_barBottomLineImage_key = &SW_barBottomLineImage_key;
 
 - (UIImageView *)sw_barBackgroundImageView {
     return objc_getAssociatedObject(self, SW_barBackgroundImageView_key);
-}
-
-- (BOOL)sw_isIPhoneX {
-    BOOL flag = NO;
-    if([UIScreen mainScreen].bounds.size.width == 375 && [UIScreen mainScreen].bounds.size.height == 812) {
-        flag = YES;
-    }
-    return flag;
 }
 
 
