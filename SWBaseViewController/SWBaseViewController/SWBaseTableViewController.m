@@ -10,7 +10,6 @@
 
 @interface SWBaseTableViewController ()
 
-@property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic) UITableViewStyle style;
 
 @end
@@ -25,14 +24,17 @@
     return self;
 }
 
-- (void)loadView {
-    self.tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:self.style];
-    self.view = self.tableView;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.style];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [self.view addSubview:_tableView];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    _tableView.frame = self.view.bounds;
 }
 
 - (void)didReceiveMemoryWarning {
