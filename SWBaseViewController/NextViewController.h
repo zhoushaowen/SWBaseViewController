@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Yidu. All rights reserved.
 //
 
-#import "SWBaseViewController.h"
+#import "SWBaseTableViewController.h"
 
-@interface NextViewController : SWBaseViewController
+@interface NextViewController : SWBaseTableViewController
 
 @end

@@ -14,6 +14,7 @@
 		365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */; };
 		36A579331F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A579321F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m */; };
 		36CDFA1420C77EA600760657 /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CDFA1320C77EA600760657 /* PresentViewController.m */; };
+		36D2AD7A211818B300B1BA4E /* SWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D2AD79211818B300B1BA4E /* SWBaseTableViewController.m */; };
 		36F3C6DD1E8C2B2D00812869 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C6DC1E8C2B2D00812869 /* main.m */; };
 		36F3C6E01E8C2B2D00812869 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C6DF1E8C2B2D00812869 /* AppDelegate.m */; };
 		36F3C6E61E8C2B2D00812869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F3C6E41E8C2B2D00812869 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 		36A579321F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWBaseViewController.m"; sourceTree = "<group>"; };
 		36CDFA1220C77EA600760657 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
 		36CDFA1320C77EA600760657 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
+		36D2AD78211818B300B1BA4E /* SWBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBaseTableViewController.h; sourceTree = "<group>"; };
+		36D2AD79211818B300B1BA4E /* SWBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWBaseTableViewController.m; sourceTree = "<group>"; };
 		36F3C6D81E8C2B2D00812869 /* SWBaseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWBaseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F3C6DC1E8C2B2D00812869 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36F3C6DE1E8C2B2D00812869 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 			children = (
 				36FA9C8C1E97D5200071FB96 /* SWBaseViewController.h */,
 				36FA9C8D1E97D5200071FB96 /* SWBaseViewController.m */,
+				36D2AD78211818B300B1BA4E /* SWBaseTableViewController.h */,
+				36D2AD79211818B300B1BA4E /* SWBaseTableViewController.m */,
 				363BFCE31EB5EEF80074B7FE /* SWVisualEffectView.h */,
 				363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */,
 				36A579311F78B10A00EA5C21 /* UIViewController+SWBaseViewController.h */,
@@ -221,6 +226,7 @@
 				36F3C6FA1E8C2C2800812869 /* UIImage+Color.m in Sources */,
 				36A579331F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m in Sources */,
 				36F8F9361E9787D100B79024 /* NextViewController.m in Sources */,
+				36D2AD7A211818B300B1BA4E /* SWBaseTableViewController.m in Sources */,
 				36F3C6E01E8C2B2D00812869 /* AppDelegate.m in Sources */,
 				36F3C6DD1E8C2B2D00812869 /* main.m in Sources */,
 				36FA9C911E97D5200071FB96 /* SWNavigationController.m in Sources */,
