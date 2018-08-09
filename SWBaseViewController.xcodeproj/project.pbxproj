@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		360C25761EC19BA2003423B2 /* UIView+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C25751EC19BA2003423B2 /* UIView+SWBaseViewController.m */; };
 		363BFCE51EB5EEF80074B7FE /* SWVisualEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */; };
 		365E89001EADBE930035B637 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365E88FE1EADBE930035B637 /* 1@2x.png */; };
 		365E89011EADBE930035B637 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365E88FF1EADBE930035B637 /* 2@2x.png */; };
 		365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */; };
-		36A579331F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A579321F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m */; };
 		36CDFA1420C77EA600760657 /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CDFA1320C77EA600760657 /* PresentViewController.m */; };
 		36D2AD7A211818B300B1BA4E /* SWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D2AD79211818B300B1BA4E /* SWBaseTableViewController.m */; };
 		36E53358211ACD7D005250A4 /* SWBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E53357211ACD7D005250A4 /* SWBaseCollectionViewController.m */; };
@@ -29,16 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		360C25741EC19BA2003423B2 /* UIView+SWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SWBaseViewController.h"; sourceTree = "<group>"; };
-		360C25751EC19BA2003423B2 /* UIView+SWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SWBaseViewController.m"; sourceTree = "<group>"; };
 		363BFCE31EB5EEF80074B7FE /* SWVisualEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWVisualEffectView.h; sourceTree = "<group>"; };
 		363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWVisualEffectView.m; sourceTree = "<group>"; };
 		365E88FE1EADBE930035B637 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 		365E88FF1EADBE930035B637 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
 		365EFBCE1E9F4ADE00E4315C /* SWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTabBarController.h; sourceTree = "<group>"; };
 		365EFBCF1E9F4ADE00E4315C /* SWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTabBarController.m; sourceTree = "<group>"; };
-		36A579311F78B10A00EA5C21 /* UIViewController+SWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SWBaseViewController.h"; sourceTree = "<group>"; };
-		36A579321F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SWBaseViewController.m"; sourceTree = "<group>"; };
 		36CDFA1220C77EA600760657 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
 		36CDFA1320C77EA600760657 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
 		36D2AD78211818B300B1BA4E /* SWBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWBaseTableViewController.h; sourceTree = "<group>"; };
@@ -136,10 +130,6 @@
 				36E53357211ACD7D005250A4 /* SWBaseCollectionViewController.m */,
 				363BFCE31EB5EEF80074B7FE /* SWVisualEffectView.h */,
 				363BFCE41EB5EEF80074B7FE /* SWVisualEffectView.m */,
-				36A579311F78B10A00EA5C21 /* UIViewController+SWBaseViewController.h */,
-				36A579321F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m */,
-				360C25741EC19BA2003423B2 /* UIView+SWBaseViewController.h */,
-				360C25751EC19BA2003423B2 /* UIView+SWBaseViewController.m */,
 				36FA9C8E1E97D5200071FB96 /* SWNavigationController.h */,
 				36FA9C8F1E97D5200071FB96 /* SWNavigationController.m */,
 				365EFBCE1E9F4ADE00E4315C /* SWTabBarController.h */,
@@ -222,14 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				360C25761EC19BA2003423B2 /* UIView+SWBaseViewController.m in Sources */,
 				36F3C6FD1E8C2E5A00812869 /* ViewController.m in Sources */,
 				36CDFA1420C77EA600760657 /* PresentViewController.m in Sources */,
 				363BFCE51EB5EEF80074B7FE /* SWVisualEffectView.m in Sources */,
 				365EFBD01E9F4ADE00E4315C /* SWTabBarController.m in Sources */,
 				36FA9C901E97D5200071FB96 /* SWBaseViewController.m in Sources */,
 				36F3C6FA1E8C2C2800812869 /* UIImage+Color.m in Sources */,
-				36A579331F78B10A00EA5C21 /* UIViewController+SWBaseViewController.m in Sources */,
 				36F8F9361E9787D100B79024 /* NextViewController.m in Sources */,
 				36D2AD7A211818B300B1BA4E /* SWBaseTableViewController.m in Sources */,
 				36E53358211ACD7D005250A4 /* SWBaseCollectionViewController.m in Sources */,
